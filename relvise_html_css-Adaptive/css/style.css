@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* Справка: https://webref.ru/css */
+
+/* Обнуление */
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol,
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit; /*  брос заголовков */
+}
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    background: #fafafa;
+    font-size: 14px;
+    font-weight: 500;
+    color: #252B42;
+    font-family: 'Montserrat', sans-serif;
+}
+/* ///Обнуление */
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Задаёт направление основных осей в контейнере и тем самым определяет положение флексов в контейнере. На само направление также влияет значение атрибута dir у контейнера.
+            row
+Главная ось направлена так же, как и ориентация текста, по умолчанию слева направо. Если значение dir задано как rtl, то направление оси идёт справа налево.
+            row-reverse
+Похоже на значение row, но меняются местами начальная и конечная точки и главная ось направлена справа налево. Если значение dir задано как rtl, то направление оси идёт слева направо.
+            column
+Главная ось располагается вертикально и направлена сверху вниз.
+            column-reverse
+Главная ось располагается вертикально, но меняется положение начальной и конечной точек и ось направлена снизу вверх.*/
+}
+
+._container{ /* технический класс, содержит общие стили, обозначу "_" */
+    max-width: 1046px;
+    margin: 0px auto; /* контейнер посередине, блочный элемент, который ограничен по ширине */
+    padding: 0 15px; /* добавляю отступы во избежании прилипания контента при уменьшении размеров окна браузера */
+    box-sizing: content-box;/* Применяется для изменения алгоритма расчёта ширины и высоты элемента.
+
+Согласно спецификации CSS ширина блока складывается из ширины содержимого (width), значений margin, padding и border. Аналогично обстоит и с высотой блока. Свойство box-sizing позволяет изменить этот алгоритм, чтобы свойства width и height задавали размеры не содержимого, а размеры блока.
+            content-box
+Основывается на стандартах CSS, при этом свойства width и height задают ширину и высоту содержимого и не включают в себя значения margin, padding и border.
+            border-box
+Свойства width и height включают в себя значения padding и border, но не margin. */
+}
+._ibg{
+    position: relative; /* технический класс, чтобы сделать img фоновым не путем добавлени фона */
+}
+._ibg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /* Управляет соотношением сторон заменяемых элементов, таких как <img> и <video>, когда у них задана ширина или высота, а также способом масштабирования.
+            fill
+Элемент масштабируется, чтобы соответствовать заданным размерам, при этом пропорции игнорируются.
+            contain
+Элемент масштабируется, чтобы целиком уместиться в заданные размеры с соблюдением пропорций.
+            cover
+Элемент увеличивается или уменьшается, чтобы целиком заполнить заданную область с сохранением пропорций.
+            none
+Сохраняются исходные пропорции элемента, установленные значения ширины или высоты не влияют на содержимое.*/
+}
+
+/*------------------------------------------------------------------*/
+.header{
+    position: absolute; /* Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.
+            absolute
+Указывает, что элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента и нет. Положение элемента задается свойствами left, top, right и bottom, также на положение влияет значение свойства position родительского элемента. Так, если у родителя значение position установлено как static или родителя нет, то отсчет координат ведется от края окна браузера. Если у родителя значение position задано как fixed, relative или absolute, то отсчет координат ведется от края родительского элемента.
+            fixed
+По своему действию это значение близко к absolute, но в отличие от него привязывается к указанной свойствами left, top, right и bottom точке на экране и не меняет своего положения при прокрутке веб-страницы. Браузер Firefox вообще не отображает полосы прокрутки, если положение элемента задано фиксированным, и оно не помещается целиком в окно браузера. В браузере Opera хотя и показываются полосы прокрутки, но они никак не влияют на позицию элемента.
+            relative
+Положение элемента устанавливается относительно его исходного места. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения.
+            static
+Элементы отображаются как обычно. Использование свойств left, top, right и bottom не приводит к каким-либо результатам.
+            inherit
+Наследует значение родителя.*/
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50; /* Любые позиционированные элементы на веб-странице могут накладываться друг на друга в определенном порядке, имитируя тем самым третье измерение, перпендикулярное экрану. Каждый элемент может находиться как ниже, так и выше других объектов веб-страницы, их размещением по z-оси и управляет z-index. Это свойство работает только для элементов, у которых значение position задано как absolute, fixed или relative. z-index: число | auto | inherit(наследование от родителя) */
+}
+.header__container{
+    display: flex;
+    min-height: 104px; /* задаю высоту */
+    align-items: center; /* Свойство align-items выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении. align-items: flex-start | flex-end | center | baseline | stretch . https://webref.ru/css/align-items */
+}
+@media (max-width: 479px) {
+    .header__container{
+        min-height: 70px;
+    }
+}
+.header__logo{
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit; /* наследование цвета - ссылки цвет не наследуют */
+}
+.header__menu{
+    margin: 0 0 0 133px;
+}
+@media (max-width: 992px) { /* адаптирую отступ при изменении ширины окна браузера */
+    .header__menu{
+        margin: 0 0 0 80px;
+    }
+}
+@media (max-width: 767px) {
+    .header__menu{
+        margin: 0 0 0 40px;
+    }
+}
+@media (max-width: 479px) {
+    .header__menu{
+        margin: 0 0 0 20px;
+    }
+}
+.menu{
+    padding: 5px 0; /* отступы безопасности */
+}
+.menu__link{
+    color: #737373;
+    font-weight: 600;
+    line-height: calc(24/14*100%); /* 24px/14px*100%=171%, задаю минимальную высоту строки текста - расстояние между строками */
+}
+@media (max-width: 479px) {
+    .menu__link{
+        font-size: 18px;
+    }
+}
+.menu__list{
+    display: flex;
+    flex-wrap: wrap; /* Указывает, следует ли флексам располагаться в одну строку или можно занять несколько строк. Если перенос строк допускается, то свойство также позволяет контролировать направление, в котором выкладываются строки. При уменьшении размера окна браузера.
+            nowrap
+Флексы выстраиваются в одну линию.
+            wrap
+Флексы выстраиваются в несколько строк, их направление задаётся свойством flex-direction.
+            wrap-reverse
+Флексы выстраиваются в несколько строк, в направлении, противоположном flex-direction.*/
+}
+.menu__item:not(:last-child){
+    margin: 0 21px 0 0; /* задаю расстояние между ссылками, кроме последней */
+}
+/*------------------------------------------------------------------*/
+.page{
+    flex: 1 1 auto; /*
+            flex-grow: Определяет, сколько пространства может занимать флекс внутри контейнера. В качестве значения принимаются числа, они задают пропорции каждого флекса. К примеру, если для всех элементов установлено значение 1, то они получатся равного размера. Если какой-то элемент получил значение 2, то его размер будет в два раза больше остальных.
+            flex-shrink: Устанавливает коэффициент сжатия флексов в контейнере и задаёт, насколько элемент будет уменьшаться по отношению к другим флексам, чтобы разместить все элементы в одну строку.
+            flex-basis: Свойство flex-basis определяет основу флекса, которая является начальным размером элемента. Похоже на свойства width и height, к которым добавляется содержимое элемента.
+*/
+}
+.page__main-block{
+
+}
+.page__services{
+
+}
+.main-block{
+    position: relative;
+}
+.main-block__container{
+
+}
+.main-block__body{
+    padding: 184px 0 191px 0;
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+}
+
+@media (max-width: 992px) {
+    .main-block__body{
+        padding: 120px 0 191px 0;
+    }
+}
+@media (max-width: 992px) {
+    .main-block__body{
+        padding: 115px 0 165px 0;
+    }
+}
+.main-block__body > *:not(:last-child){ /* обращаюсь ко всем объектам body первого уровня */
+    margin: 0 0 35px 0;
+}
+.main-block__title{
+    font-size: 58px;
+    line-height: calc(80/58*100%);
+    letter-spacing: 0.2px;
+    font-weight: 800;
+}
+@media (max-width: 479px) {
+    .main-block__title {
+        font-size: 42px;
+    }
+}
+.main-block__text{
+    color: #737373;
+    font-size: 20px;
+    line-height: calc(30/20*100%);
+}
+@media (max-width: 479px) {
+    .main-block__text{
+        color: #585757;
+    }
+}
+.main-block__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+}
+.main-block__button{
+    border-radius: 37px;
+    display: flex;
+    min-height: 48px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 5px 36px;
+    margin: 10px 0;
+}
+@media (max-width: 479px) {
+    .main-block__button{
+        flex: 1 1 100%;
+    }
+}
+@media (min-width: 479px) {
+    .main-block__button:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+.main-block__button_orange{
+    background: #FF7B47;
+    color: #FFFFFF;
+}
+.main-block__button_border{
+    color: #0D5C63;
+    border: 1px solid #0D5C63;
+}
+.main-block__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+@media (max-width: 1300px) {
+    .main-block__image img{
+        object-position: right;
+    }
+}
+@media (max-width: 992px) {
+    .main-block__image img{
+        opacity: 0.5;
+        transition: 1s;
+    }
+}
+/*.main-block__image img{*/
+/*    object-position: center; !* указываю позицию картинки фона при изменении размера окна браузера и сохранения видимости важных элементов изображения, в данном случае нет необходимости. *!*/
+/*}*/
+/*------------------------------------------------------------------*/
+.page__services{ /* блоки над основным  position: relative; z-index: 2;*/
+    margin: -111px 0 0 0;
+    position: relative;
+    z-index: 2;
+}
+.services{
+
+}
+.services__body{
+}
+@media (min-width: 670px) {
+    .services__body{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+}
+.services__column {
+    flex: 0 1 33.333%;
+    margin: 0 0 30px 0;
+}
+@media (min-width: 670px) {
+    .services__column {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 992px) {
+    .services__column{
+        flex: 0 1 50%;
+    }
+    .services__column:not(:last-child) {
+        margin: 0 0 30px 0;
+    }
+    .services__column:last-child{
+        flex: 1 1 100%;
+    }
+}
+.services__item{
+    box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
+    background-color: #FFFFFF;
+    padding: 35px;
+    height: 100%;
+}
+@media (max-width: 479px){
+    .services__item{
+        padding: 35px;
+    }
+}
+.item-service_green{
+    background-color: #0D5C63;
+}
+.item-service_green .item-service__title{
+    color: #FFFFFF;
+}
+.item-service_green .item-service__text{
+    color: #FFFFFF;
+}
+.item-service > *:not(:last-child){
+    margin: 0 0 10px 0;
+}
+.item-service__title{
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    font-size: 24px;
+    line-height: 133%;
+}
+.item-service__text{
+    color: #737373;
+    line-height: 142%;
+}
+/*------------------------------------------------------------------*/
+.header-block{
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+.header-block__title{
+    line-height: 142%;
+    font-size: 40px;
+    font-weight: 700;
+}
+@media (max-width: 992px){
+    .header-block__title{
+        font-size: 35px;
+    }
+}
+@media (max-width: 767px){
+    .header-block__title{
+        font-size: 30px;
+    }
+}
+.header-block__title:not(:last-child){
+    margin: 0 0 10px 0;
+}
+.header-block__sub-title{
+    color: #737373;
+    line-height: 142%;
+}
+.advantages{
+    padding: 80px 0;
+}
+@media (max-width: 992px){
+    .advantages{
+        padding: 50px 0;
+    }
+}
+@media (max-width: 767px){
+    .advantages{
+        padding: 40px 0;
+    }
+}
+.advantages__header{
+    margin: 0 0 50px 0;
+}
+@media (max-width: 767px){
+    .advantages__header{
+        margin: 0 0 25px 0;
+    }
+}
+.advantages__body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+}
+.advantages__column{
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+    flex: 0 1 25%;
+}
+@media (max-width: 1020px){
+    .advantages__column{
+        flex: 0 1 50%
+    }
+}
+@media (max-width: 560px){
+    .advantages__column{
+        flex: 0 1 100%
+    }
+}
+.advantages__item{
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    font-weight: 700;
+    text-align: center;
+    height: 209px;
+}
+.advantages__item > *:not(:last-child){
+    margin: 0 0 10px 0;
+}
+.advantages__icon{
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.advantages__value{
+    font-size: 40px;
+    line-height: 142%;
+}
+.advantages__text{
+    letter-spacing: 0.1px;
+    color: #737373;
+    font-size: 16px;
+    line-height: 150%;
+}
+/*------------------------------------------------------------------*/
+.practice{
+    padding: 125px 0 80px 0;
+}
+.practice__header{
+    margin: 0 0 45px 0;
+}
+.practice__body{
+    margin: 0 -20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.practice__column{
+    padding: 0 20px;
+    flex: 0 1 25%;
+}
+.item-practice{
+    background-color: #FFFFFF;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.item-practice__content{
+    padding: 30px;
+    flex: 1 1 auto;
+}
+.item-practice__link{
+    color: inherit;
+    display: inline-block;
+}
+.item-practice__link:hover{
+    text-decoration: underline;
+}
+.item-practice__link:not(:last-child){
+    margin: 0 0 15px 0;
+}
+.item-practice__title{
+    letter-spacing: 0.1px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+}
+.item-practice__text{
+    color: #737373;
+    line-height: 142%;
+}
+.item-practice__image{
+    display: block;
+    padding: 0 0 60% 0;
+}
+/*------------------------------------------------------------------*/
+.footer{
+
+}
+
