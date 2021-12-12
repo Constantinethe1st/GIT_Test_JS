@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* Обнуление */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol,
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit; /* cброс заголовков */
+}
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    background: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+}
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+._container{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px; /* отступы безопасности */
+    box-sizing: content-box; /* добавляем отступы к ширине контейнера */
+}
+/* /// Обнуление */
+
+:root{
+    --purple: #8168F0; /* переменные */
+}
+
+/* up__header */
+.up__header{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.menu__list{
+    display: flex;
+    flex-wrap: wrap; /* меню ломается в горизонтальное */
+}
+    @media (max-width: 835px) {
+        .menu__list{
+            display: block;
+        }
+    }
+.menu__link{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: calc(19/16*100%);
+    color: var(--purple);
+}
+.header__contactAndUser{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.menu__link_arrow{
+    padding: 0 0 0 8px;
+    margin: 5px 0 0 0;
+}
+.menu__item{
+    padding: 0 24px 0 0;
+    letter-spacing: -0.1pt;
+}
+.contactAndUser__contact{
+    padding: 10px 22px 0 0;
+}
+.contact__tel{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+.contact__status{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.5;
+}
+.user__img{
+    padding: 0 7px 0 0;
+}
+.user__link{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--purple);
+}
+/* /// up__header */
+
+/* down__header */
+.down__header{
+    display: flex;
+    align-items: center;
+}
+    @media (max-width: 960px) {
+        .down__header{
+            display: block;
+        }
+    }
+.header__logo-button{
+    display: flex;
+    align-items: center;
+}
+.header__search-basket{
+    display: flex;
+    align-items: center;
+}
+.header__logo{
+    padding: 0 31px 0 0;
+}
+.header__button{
+    padding: 0 12px 0 0;
+}
+    /* header__search */
+    .search__form{
+        display: flex;
+        padding: 0 21px 0 0;
+    }
+    .search__input{
+        width: 554px;
+        height: 50px;
+        opacity: 0.4;
+        padding: 0 15px;
+        border: 1px solid #B3B7C5;
+        box-sizing: border-box;
+        border-radius: 5px 0 0 5px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 22px;
+    }
+        @media (max-width: 1140px) {
+            .search__input{
+                width: 524px;
+            }
+        }
+        @media (max-width: 1110px) {
+            .search__input{
+                width: 484px;
+            }
+        }
+        @media (max-width: 1060px) {
+            .search__input{
+                width: 444px;
+            }
+        }
+        @media (max-width: 1030px) {
+            .search__input{
+                width: 414px;
+            }
+        }
+        @media (max-width: 995px) {
+            .search__input{
+                width: 384px;
+            }
+        }
+        @media (max-width: 960px) {
+            .search__input{
+                width: 695px;
+            }
+            .search__form{
+                display: flex;
+                padding: 20px 21px 0 0;
+            }
+        }
+        @media (max-width: 950px) {
+            .search__input{
+                width: 500px;
+            }
+        }
+        @media (max-width: 740px) {
+            .search__input{
+                width: 400px;
+            }
+        }
+    .search__button{
+        width: 57px;
+        height: 50px;
+        background-color: var(--purple);
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+    }
+    /* /// header__search */
+    /* header__basket */
+    .header__basket{
+        display: flex;
+        align-items: center;
+    }
+    @media (max-width: 960px) {
+        .header__basket{
+            padding: 20px 21px 0 0;
+        }
+    }
+    .basket__img{
+        padding: 0 10px 0 0;
+    }
+    .basket__link{
+        padding: 0 8px 0 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--purple);
+    }
+    /* /// header__basket */
+/* /// down__header */
+
+/* main */
+.page{
+    display: flex;
+    flex-flow: row wrap;
+}
+    /* page__left */
+    .page__left{
+        margin: 0;
+        width: 288px;
+    }
+    .user_menu__link{
+        display: block;
+    }
+    .menu__link_link{
+        display: flex;
+    }
+    .link_my_order{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #000000;
+    }
+    .in_delivery{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #8168F0;
+        padding: 0 4px;
+    }
+    .left__user_info{
+        padding: 41px 0 0 0;
+    }
+    .left__name-user{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 13px 0 0 0;
+    }
+    .left__change_profile{
+        padding: 14px 0 0 0;
+    }
+    .change_profile_link{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #21A038;
+    }
+    .left__user_menu{
+        padding: 44px 0 0 0;
+    }
+    .menu__link_link{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #8A8C94;
+    }
+    .user_menu__link{
+        margin: 0 0 20px 0;
+    }
+    /* /// page__left */
+
+    /* page__right */
+    .page__right{
+        margin: 0;
+    }
+    .right__my_orders{
+        display: flex;
+        padding: 48px 0 0 0;
+    }
+    .my_orders__number{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 44px;
+        color: #000000;
+        padding-right: 12px;
+    }
+    .numbers_order{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 44px;
+        color: #8A8C94;
+    }
+    /* /// page__right */
+/* /// main */
+
+
+
