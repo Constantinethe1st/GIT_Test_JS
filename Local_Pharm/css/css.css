@@ -309,6 +309,13 @@ body{
         display: flex;
         padding: 48px 0 0 0;
     }
+    .right__in_order_block{
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 10px
+    }
+    .in_order_block__title{
+        display: flex;
+    }
     .my_orders__number{
         font-style: normal;
         font-weight: normal;
@@ -323,6 +330,139 @@ body{
         font-size: 36px;
         line-height: 44px;
         color: #8A8C94;
+    }
+    .in_order_block__title{
+        padding: 32px 0 0 0;
+        margin: 30px 0 0 40px;
+    }
+    .in_order_block__call{
+        display: flex;
+    }
+    .in_order_block__number{
+        padding: 0 18px 0 0;
+        margin: -5px 0 0 0;
+    }
+    .in_order{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .number{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #8168F0;
+        padding: 4px 0 0 0;
+    }
+    .block__call_us{
+        padding: 0 0 0 10px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #21A038;
+    }
+    .in_order_block__payment_by_card{
+        text-align: right;
+        padding-left: 270px;
+        padding-right: 27px;
+    }
+    .payment_by_card_pay{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+    }
+    .payment_by_card_rub{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+.delivery_info{
+    display: flex;
+    padding: 0 0 0 40px;
+}
+.info__address{
+    padding: 26px 0 0 0;
+}
+.info__time{
+    padding: 26px 0 0 49px;
+}
+.line__img{
+    width: 820px;
+    padding: 33px 0 84px 0;
+}
+.address__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8A8C94;
+}
+.address__home{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 4px 0 0 0;
+}
+.time__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8A8C94;
+}
+.time__date{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 4px 0 0 0;
+}
+    .right__while_goods{
+        display: flex;
+        align-items: center;
+        /*border: 1px solid rgba(196, 196, 196, 0.3);*/
+    }
+    .good_arbidol{
+        padding: 0 44px 0 36px;
+    }
+    ._good__name_arbidol{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    ._inst_con{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: #21A038;
+    }
+    .point__img{
+        padding: 14px 5px 0 5px;
+    }
+    ._good__price{
+        margin-left: auto;
+    }
+    .price_rub{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        padding: 0 27px 25px 0;
+    }
+    ._good__links{
+        display: flex;
+        align-items: center;
+    }
+    .recipe__button{
+        padding: 12px 0 0 0;
     }
     /* /// page__right */
 /* /// main */
