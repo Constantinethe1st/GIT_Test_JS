@@ -238,7 +238,6 @@ body{
 /* main */
 .page{
     display: flex;
-    flex-flow: row wrap;
 }
     /* page__left */
     .page__left{
