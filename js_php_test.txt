@@ -1,0 +1,87 @@
+1. Вывести все простые числа из последовательности от 0 до 100. (Простое число делится только на себя и единицу).
+
+let n = 100;
+for (let i = 2; i <= n; i++) {
+  let flag=1;
+  for (let j = 2; (j <= i/2)&&(flag==1); j=j+1) {
+     if (i%j==0) {
+         flag=0}
+    }
+ if (flag==1) {console.log(i);
+ }
+}
+
+==========================
+
+<?php
+for ($c = 2; $c <= 100; $c++) {
+for($i = 2; $i < $c; $i++) {
+if ($c % $i == 0) continue 2;
+}
+echo "$c ";
+}
+?>
+
+
+2. Написать функцию которая возвращает самое больше число в массиве.
+
+let maxNumber = arr => Math.max(...arr)
+console.log(maxNumber([0, 2, 5, 7, 1]));
+
+==========================
+
+<?php
+$arr = [0, 2, 5, 7, 1];
+$max = null;
+$i = 0;
+
+while(true)
+{
+    if(isset($arr[$i]))
+    {
+        if($arr[$i] > $max or $max === null)
+        {
+            $max = $arr[$i];
+        }
+    }
+    else
+        break;
+    $i++;
+}
+
+echo "Max value: $max";
+?>
+
+
+3. Написать функцию получающую на вход строку длинной не более 100 символов и заменяющую в этой строке символ пробела на "%20", а все Прописные буквы на строчные.
+
+let input = "HelLo, wOrLD!";
+let output = "";
+        for (let i = 0; i < input.length; i++){
+
+            let outputSign = input[i];  
+
+            if (outputSign == ' '){
+                output += '%20'
+            } else if (input.length > 100){
+                break; // выход из цикла
+            } else {
+            output += outputSign;
+            }
+        };
+console.log(output.toLowerCase())
+
+==========================
+
+<?php
+$input = "HelLo, wOrLD!";
+
+$inputNumber = strlen($input);
+
+if($inputNumber > 100){
+    echo 'В предложении должно быть не более 100 символов!';
+} elseif ($inputNumber < 100){
+    $refInput = str_replace(' ', '%20', $input);
+    echo strtolower($refInput);
+};
+?>
