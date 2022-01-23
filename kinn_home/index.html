@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinn Home</title>
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/adapt.css">
 </head>
 <body>
 <div class="wrapper">
@@ -132,10 +133,11 @@
             <div class="newsletter-h2">Sign up to our newsletter</div>
             <div class="newsletter-h4">Receive special offers and first look at new products.</div>
             <div class="newsletter-Subscribe">
-                <form name="subscribe" method="post" action="#">
-                    <input type="text" id="text" class="input">
-                    <input type="submit" class="submit" value="SUBSCRIBE">
+                <form method="post" id="my_form" action="">
+                    <input type="text" id="text" class="input" name="f[name]">
+                    <input type="submit" id="btn" class="submit" value="SUBSCRIBE">
                 </form>
+                <div id="my_message"></div>
             </div>
         </section>
         <section class="kinnMoments _container">
@@ -193,5 +195,7 @@
         </div>
     </footer>
 </div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/ajax.js"></script>
 </body>
 </html>

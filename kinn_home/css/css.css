@@ -224,8 +224,8 @@ body{
 .arrow{
     margin: 7px 0 0 0;
 }
-
 /*=======*/
+
 .board__collection{
     background-color: #FFFFEF;
 }
@@ -309,7 +309,6 @@ body{
 .ourDesignStory{
     display: flex;
     text-align: center;
-    /*align-items: center;*/
     background-color: #FFFFEF;
     margin-bottom: 24px;
 }
@@ -337,6 +336,7 @@ body{
     margin: 32px 0 33px 0;
 }
 /*=======*/
+
 .newsletter{
     background-color: #FFFFEF;
     margin-bottom: 24px;
@@ -413,7 +413,6 @@ body{
     margin-right: 8px;
 }
 /*=======*/
-
 
 .footer{
     display: flex;

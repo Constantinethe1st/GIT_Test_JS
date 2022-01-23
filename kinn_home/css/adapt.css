@@ -1,0 +1,336 @@
+@media (max-width: 1400px) {
+    .footer__section_C{
+        margin: 0 0 0 60px;
+    }
+}
+
+@media (max-width: 1322px) {
+    .ourDesignStory{
+        display: inline;
+    }
+    .minimalism__text{
+        top: -550px;
+    }
+    .text{
+        margin: 30px 85px 0 85px;
+    }
+    .img_cover{
+        height: 700px;
+    }
+    .believe__minimalism{
+        height: 650px;
+        margin-bottom: 10px;
+    }
+    .ourDesignStory-text__h2{
+        margin-top: 25px;
+    }
+    .ourDesignStory-text__line {
+        margin: 10px 0 10px 0;
+    }
+}
+
+@media (max-width: 1270px) {
+    .footer__section_B{
+        margin: 0 45px 0 20px;
+    }
+    .img_cover{
+        height: 660px;
+    }
+}
+
+@media (max-width: 1190px) {
+    .kinnMoments_imgs{
+        display: inline;
+    }
+    .imgs-img1{
+        display:block;
+        margin:auto;
+        padding-bottom: 5px;
+    }
+    .footer__section_A{
+        width: 348px;
+        padding-left: 82px;
+    }
+    .footer__section_B{
+        width: 170px;
+        margin: 0 30px 0 20px;
+    }
+    .footer__section_C{
+        margin: 0 0 0 0;
+    }
+    .img_cover{
+        height: 620px;
+    }
+    .believe__minimalism{
+        height: 580px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .header__logo {
+        margin: 10px 50px 0 50px;
+    }
+    .img_cover{
+        height: 610px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .minimalism__text{
+        top: -400px;
+    }
+    .board__collection-cards{
+        display: inline;
+    }
+    .collection-cards__div:not(:last-child) {
+        margin: 0 0 0 0;
+    }
+    .someWoodBoards {
+        display: block;
+        margin: auto;
+        padding-bottom: 5px;
+    }
+    .board__collection-title {
+        margin: 89px 0 30px 0;
+        padding: 63px 0 0 0;
+    }
+    .text{
+        font-size: 27px;
+        line-height: 51px;
+        text-align: center;
+        color: #56593D;
+        margin: 94px 85px 0 85px;
+    }
+    .min__text-h2 {
+        font-size: 27px;
+        line-height: 51px;
+    }
+    .img_cover{
+        height: 530px;
+    }
+    .believe__minimalism{
+        height: 580px;
+    }
+}
+
+@media (max-width: 960px) {
+    .menu__list{
+        display: block;
+    }
+    .header__logo {
+        margin: 10px 50px 0 130px;
+    }
+    ._link-A {
+        margin-left: 35px;
+    }
+    ._link-B{
+        margin-left: 35px;
+    }
+    ._link-C{
+        margin-left: 35px;
+    }
+    ._link-D{
+        margin-left: 35px;
+    }
+    .DS-img__A {
+        margin: 64px 0 64px 0;
+        width: 70%;
+    }
+    .footer__section_C {
+       display: grid;
+    }
+    .footer__section_A {
+        width: 300px;
+        padding-left: 82px;
+    }
+    .footer__section_B {
+        width: 155px;
+        margin: 0px 20px 0 0px;
+    }
+}
+
+@media (max-width: 770px) {
+    .minimalism__text {
+        top: -300px;
+    }
+    .min__text-h2 {
+        font-size: 21px;
+        line-height: 20px;
+    }
+    .img_cover{
+        height: 500px;
+    }
+    .believe__minimalism{
+        height: 500px;
+    }
+}
+
+@media (max-width: 710px) {
+    .img_cover {
+        height: 350px;
+    }
+    .text {
+        margin: 105px 85px 0 85px;
+    }
+    .believe__minimalism {
+        height: 350px;
+    }
+    .footer__section_A {
+        font-size: 12px;
+        line-height: 15px;
+        width: 200px;
+        padding-left: 82px;
+        margin-right: 40px;
+    }
+    .footer__section_B {
+        width: 140px;
+        margin: 0px 5px 0 0px;
+    }
+    .section_B {
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFEF;
+        padding-left: 32px;
+    }
+}
+
+@media (max-width: 665px) {
+    .header__flex {
+        display: block;
+        text-align: center;
+    }
+    .menu__list {
+        line-height: 3;
+    }
+    .header__logo {
+        margin: 0 0 0 0;
+    }
+    .logo {
+        margin: 0 0 0 0;
+        padding: 10px 0 10px 0;
+    }
+    ._link-A {
+        margin-left: 0;
+        font-size: 27px;
+    }
+    ._link-B{
+        margin-left: 0;
+        font-size: 27px;
+    }
+    ._link-C{
+        margin-left: 0;
+        font-size: 27px;
+    }
+    ._link-D{
+        margin-left: 0;
+        font-size: 27px;
+    }
+    .header__basketAndUser {
+        display: block;
+        align-items: center;
+        margin: 20px auto 0 auto;
+    }
+    .basket {
+        margin-right: 0;
+    }
+    .img__main-cover{
+        opacity: 0.5;
+        transition: 1s;
+    }
+    .someWoodBoards {
+        width: 80%;
+    }
+    .min__text-h2 {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    ._container{
+        padding: 0;
+    }
+    .minimalism__text {
+        top: -170px;
+    }
+
+    .imgCover-min {
+        opacity: 0.5;
+        transition: 1s;
+    }
+
+    .ourDesignStory-text__h4 {
+        font-size: 17px;
+        line-height: 28px;
+        margin: 0 10px 0 10px;
+    }
+    .input {
+        width: 250px;
+    }
+    .submit{
+        padding: 8px 14px;
+        width: 70px;
+        font-size: 8px;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+    }
+    .footer__section_A {
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .footer__section_B {
+        display: block;
+        padding: 10px;
+        margin:0 auto;
+    }
+    .footer__section_C{
+        display: inline;
+        margin: 0 auto 0 auto;
+    }
+    .line__white_A{
+        margin: 0;
+    }
+    .line__white_B{
+        padding: 0;
+        margin: 0;
+    }
+    .img_C{
+        margin: 10px;
+    }
+    .footer__li {
+        margin: 10px;
+        font-size: 16px;
+    }
+    .section_B {
+        padding: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .elevate {
+        font-size: 22px;
+        line-height: 5px;
+        text-align: right;
+        margin-bottom: 15px;
+    }
+    .textAndLink {
+        top: -160px;
+    }
+    .img_cover {
+        height: 200px;
+    }
+    .text {
+        margin: 120px 10px 0 10px;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .believe__minimalism {
+        height: 220px;
+    }
+    .input {
+        width: 200px;
+    }
+}
